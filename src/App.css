@@ -4,17 +4,116 @@
   text-align: center;
 }
 .w60 {
-  width: 60%;
+  width: 70%;
 }
-
+.w30 {
+  width: 40%;
+  font-size: 1rem;
+}
+.w20 {
+  width: 30%;
+}
+.f20 {
+  font-size: 0.7rem;
+}
 .imgcss {
   /* max-width: 16rem; */
   max-height: 14rem;
   padding: 1rem;
   min-height: 14rem;
-  background: linear-gradient(45deg, red,orange,yellow,green,blue,indigo,violet);
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+.imgcss:hover {
+  background: linear-gradient(
+    135deg,
+    red,
+    orange,
+    indigo,
+    yellow,
+    rgb(177, 49, 87)
+  );
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.705),
+    0 8px 22px 0 rgba(0, 0, 0, 0.719);
 }
 .namepoke {
-  height: 1rem;
-  font-size: 1.1rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.705),
+    0 8px 22px 0 rgba(0, 0, 0, 0.719);
+  background-color: rgba(62, 92, 189, 0);
+  color: #fff;
+}
+
+.lifont {
+  color: black;
+  font-size: 1rem;
+}
+.lifont:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.377),
+    rgba(255, 166, 0, 0.322),
+    rgba(255, 255, 0, 0.199)
+  );
+  color: rgb(255, 255, 255);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.705),
+    0 8px 22px 0 rgba(0, 0, 0, 0.719);
+}
+.pagination-size {
+  font-size: 0.89rem;
+  height: 3rem;
+}
+
+/* responsive */
+
+@media screen and (max-width: 992px) {
+  * {
+    font-size: 0.8rem;
+  }
+  .imgcss {
+    max-height: 20rem;
+    min-height: 20rem;
+  }
+  .w60 {
+    width: 70%;
+  }
+  .w30 {
+    width: 40%;
+    font-size: 0.7rem;
+    height: 3rem;
+    font-weight: 1rem;
+  }
+  .w20 {
+    width: 40%;
+  }
+  .f20 {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .w60 {
+    width: 100%;
+  }
+  .w30 {
+    width: 40%;
+    height: 3rem;
+  }
+  .w20 {
+    width: 40%;
+  }
+  .pokeheading{
+    font-size: 4rem;
+  }
 }

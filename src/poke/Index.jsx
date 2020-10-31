@@ -5,6 +5,7 @@ import Pokemon from "./Pokemon";
 
 const Index = () => {
   const [search, setSearch] = useState("");
+  const [pokecount, setPokecount] = useState("");
   const [pokemon, setPokemon] = useState([]);
   const onInputSearch = (e) => {
     setSearch(e.target.value);
@@ -15,13 +16,13 @@ const Index = () => {
 
   const getPokemon = async () => {
     const res = await Axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1050`);
-    // console.log(res.data.results);
+    setPokecount(res.data.results.length);
     setPokemon(res.data.results);
   };
   return (
     <>
       <Header search={search} onInputSearch={onInputSearch} />
-      <Pokemon pokemon={pokemon} />
+      <Pokemon pokemon={pokemon} pokecount={pokecount} />
     </>
   );
 };

@@ -7,6 +7,6 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", monospace;
-  background: linear-gradient( red,orange,yellow,green,blue,indigo,violet);
+  background: linear-gradient(45deg, red,orange,green,skyblue,yellow,violet);
 }
 
